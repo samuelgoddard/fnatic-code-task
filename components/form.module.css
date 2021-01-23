@@ -1,0 +1,70 @@
+.form {
+  @apply w-full;
+
+  legend {
+    @apply w-full font-display text-xs uppercase tracking-wide;
+  }
+  
+  input {
+    @apply block border border-black p-3 w-full text-sm font-sans transition ease-in-out duration-300;
+  }
+
+  input:focus {
+    @apply border-orange outline-none;
+  }
+  
+  label {
+    @apply text-xs uppercase tracking-wide block;
+  }
+}
+
+.form-group {
+  @apply flex flex-wrap mb-2;
+
+  @screen sm {
+    @apply -mx-2;
+  }
+}
+
+
+.form-group__item {
+  @apply w-full mb-4 relative;
+
+  .label {
+    @apply absolute bg-white px-0 z-0;
+    top: 30%;
+    left: 1.325rem;
+    transform-origin: top left;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .input {
+    @apply relative z-10 bg-transparent;
+  }
+
+  &:focus-within .label {
+    @apply text-orange px-2 z-20;
+    top: -5px;
+    left: 0.75rem;
+    transform: scale(0.8);
+  }
+
+  .label.active {
+    @apply text-black px-2 z-20;
+    top: -5px;
+    left: 0.75rem;
+    transform: scale(0.8);
+  }
+  
+  @screen sm {
+    @apply px-2;
+  }
+}
+
+.form-group__item--half {
+  @apply w-full;
+
+  @screen sm {
+    @apply w-1/2 px-2;
+  }
+}

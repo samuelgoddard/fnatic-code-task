@@ -1,0 +1,15 @@
+.btn {
+  @apply bg-black text-white px-5 py-4 font-display uppercase text-2xs tracking-wider text-center transition ease-in-out duration-300;
+
+  &:hover, &:focus {
+    @apply bg-orange text-white outline-none;
+  }
+}
+
+.btn--primary {
+  @apply bg-orange text-white;
+  
+  &:hover, &:focus {
+    @apply bg-black text-white;
+  }
+}

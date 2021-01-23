@@ -32,7 +32,7 @@
 
   .label {
     @apply absolute bg-white px-0 z-0;
-    top: 30%;
+    top: 33%;
     left: 1.325rem;
     transform-origin: top left;
     transition: all 0.25s ease-in-out;

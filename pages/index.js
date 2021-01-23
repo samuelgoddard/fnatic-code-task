@@ -8,7 +8,7 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"/>
+        <meta name="viewport" content="maximum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no"/>
         <title>Fnatic Code Task</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>

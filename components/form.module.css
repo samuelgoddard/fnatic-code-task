@@ -6,7 +6,7 @@
   }
   
   input {
-    @apply block border border-black p-3 w-full text-sm font-sans transition ease-in-out duration-300;
+    @apply block border border-black p-3 w-full text-sm font-sans transition ease-in-out duration-300 appearance-none;
   }
 
   input:focus {

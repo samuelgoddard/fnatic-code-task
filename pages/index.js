@@ -19,15 +19,15 @@ export default function Index() {
             <h2 className="font-display uppercase block mb-4">Fixed Width Nav Column</h2>
             
             <ul>
-              <li><a className="underline" href="#">Nav Item 1</a></li>
-              <li><a className="underline" href="#">Nav Item 2</a></li>
+              <li><a className="underline hover:text-orange focus:text-orange transition ease-in-out duration-300" href="#">Nav Item 1</a></li>
+              <li><a className="underline hover:text-orange focus:text-orange transition ease-in-out duration-300" href="#">Nav Item 2</a></li>
             </ul>
           </nav>
 
           <main className="flex-1 p-5" role="main">
             <h1 className="font-display uppercase block mb-4">Fluid Centre Column</h1>
 
-            <div className="max-w-2xl mt-6">
+            <div className="mt-6">
               <Form />
             </div>
           </main>

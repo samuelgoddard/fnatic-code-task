@@ -1,20 +1,4 @@
-@font-face {
-  font-family: 'Druk Wide';
-  src: url('../public/fonts/DrukWide-Medium-Web.woff2') format('woff2'),
-      url('../public/fonts/DrukWide-Medium-Web.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Suisse Intl';
-  src: url('../public/fonts/SuisseIntl-Regular-WebS.woff2') format('woff2'),
-      url('../public/fonts/SuisseIntl-Regular-WebS.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+@import '_fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -23,3 +7,6 @@
 body {
   @apply font-sans;
 }
+
+::-moz-selection { @apply bg-orange text-black bg-opacity-50 }
+::selection { @apply bg-orange text-black bg-opacity-50 }

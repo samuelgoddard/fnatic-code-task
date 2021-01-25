@@ -1,4 +1,7 @@
 # Fnatic Code Task
+
+[https://sg1989-fnatic-code-task.vercel.app/](https://sg1989-fnatic-code-task.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) by Sam Goddard for Fnatic.
 
 ## Technologies Used

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './form.module.css'
-import Button from '../components/button'
+import SubmitButton from '../components/submit-button'
+import TextField from '../components/text-field'
 import cn from 'classnames'
 
 export default function Form() {
@@ -72,32 +73,25 @@ export default function Form() {
           <legend>Login Details:</legend>
         </div>
         <div className={cn(styles['form-group__item'], styles['form-group__item--half'])}>
-          <label
-            htmlFor="username"
-            className={isUsernameActive ? cn(styles.label, styles.active): styles.label}
-          >Username</label>
-          <input
-            type="text"
+          <TextField
+            label="Username"
             name="username"
-            className={styles.input}
+            active={isUsernameActive}
             value={username}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
         <div className={cn(styles['form-group__item'], styles['form-group__item--half'])}>
-          <label
-            htmlFor="password"
-            className={isPasswordActive ? cn(styles.label, styles.active): styles.label}
-          >Password</label>
-          <input
+          <TextField
             type="password"
+            label="Password"
             name="password"
-            minLength="8"
-            className={styles.input}
+            active={isPasswordActive}
             value={password}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
+            minLength={8}
           />
         </div>
       </fieldset>
@@ -108,58 +102,44 @@ export default function Form() {
           <legend>Contact Details:</legend>
         </div>
         <div className={cn(styles['form-group__item'], styles['form-group__item--half'])}>
-          <label
-            htmlFor="fname"
-            className={isFnameActive ? cn(styles.label, styles.active): styles.label}
-          >First Name</label>
-          <input
-            type="text"
+          <TextField
+            label="First Name"
             name="fname"
-            className={styles.input}
+            active={isFnameActive}
             value={fname}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
         <div className={cn(styles['form-group__item'], styles['form-group__item--half'])}>
-          <label
-            htmlFor="lname"
-            className={isLnameActive ? cn(styles.label, styles.active): styles.label}
-          >Last Name</label>
-          <input
-            type="text"
+          <TextField
+            label="Last Name"
             name="lname"
-            className={styles.input}
+            active={isLnameActive}
             value={lname}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
         <div className={styles['form-group__item']}>
-          <label
-            htmlFor="email"
-            className={isEmailActive ? cn(styles.label, styles.active): styles.label}
-          >Email Address</label>
-          <input
+          <TextField
             type="email"
+            label="Email"
             name="email"
+            active={isEmailActive}
             value={email}
-            className={styles.input}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
         <div className={styles['form-group__item']}>
-          <label
-            htmlFor="email"
-            className={isTelephoneActive ? cn(styles.label, styles.active): styles.label}
-          >Telephone</label>
-          <input
+          <TextField
             type="tel"
+            label="Telephone"
             name="telephone"
+            active={isTelephoneActive}
             value={telephone}
-            className={styles.input}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
@@ -171,50 +151,38 @@ export default function Form() {
           <legend>Address Details:</legend>
         </div>
         <div className={styles['form-group__item']}>
-          <label
-            htmlFor="address"
-            className={isAddressActive ? cn(styles.label, styles.active): styles.label}
-          >Address</label>
-          <input
-            type="text"
+          <TextField
+            label="Address"
             name="address"
+            active={isAddressActive}
             value={address}
-            className={styles.input}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
         <div className={cn(styles['form-group__item'], styles['form-group__item--half'])}>
-          <label
-            htmlFor="cite"
-            className={isCityActive ? cn(styles.label, styles.active): styles.label}
-          >City</label>
-          <input
-            type="text"
+          <TextField
+            label="City"
             name="city"
-            className={styles.input}
+            active={isCityActive}
             value={city}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
         <div className={cn(styles['form-group__item'], styles['form-group__item--half'])}>
-          <label
-            htmlFor="zip"
-            className={isZipActive ? cn(styles.label, styles.active): styles.label}
-          >Zip Code</label>
-          <input
-            type="text"
+          <TextField
+            label="Zip Code"
             name="zip"
-            className={styles.input}
+            active={isZipActive}
             value={zip}
-            onChange={handleChange}
+            changeHandler={handleChange}
             required
           />
         </div>
       </fieldset>
 
-      <Button primary>Submit Form</Button>
+      <SubmitButton primary>Submit Form</SubmitButton>
     </form>
   )
 }

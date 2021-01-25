@@ -1,6 +1,7 @@
 .container {
   @apply px-5 max-w-screen-2xl mx-auto;
 
+  /* Slightly increase containers padding at larger screens */
   @screen md {
     @apply px-8;
   }

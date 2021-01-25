@@ -6,6 +6,7 @@ import Form from '../components/form'
 export default function Index() {
   return (
     <Layout>
+      {/* Head Meta Tags */}
       <Head>
         <meta name="viewport" content="maximum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no"/>
         <title>Fnatic Code Task</title>

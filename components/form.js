@@ -1,72 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import styles from './form.module.css'
 import SubmitButton from '../components/submit-button'
 import TextField from '../components/text-field'
 import cn from 'classnames'
 
 export default function Form() {
-  const [username,setUsername] = useState('');
-  const [isUsernameActive, setIsUsernameActive] = useState(false);
-  const [password,setPassword] = useState('');
-  const [isPasswordActive, setIsPasswordActive] = useState(false);
-  const [fname,setFname] = useState('');
-  const [isFnameActive, setIsFnameActive] = useState(false);
-  const [lname,setLname] = useState('');
-  const [isLnameActive, setIsLnameActive] = useState(false);
-  const [email,setEmail] = useState('');
-  const [isEmailActive, setIsEmailActive] = useState(false);
-  const [telephone,setTelephone] = useState('');
-  const [isTelephoneActive, setisTelephoneActive] = useState(false);
-  const [address,setAddress] = useState('');
-  const [isAddressActive, setisAddressActive] = useState(false);
-  const [city,setCity] = useState('');
-  const [isCityActive, setisCityActive] = useState(false);
-  const [zip,setZip] = useState('');
-  const [isZipActive, setisZipActive] = useState(false);
+  
+  // Set the default form state
+  const [values, setValues] = useState({
+    username: '', 
+    password: '',
+    fname: '',
+    lname: '',
+    email: '',
+    telephone: '',
+    address: '',
+    city: '',
+    zip: '',
+  })
 
-  const handleChange = e => {
+  // Update form state handler
+  const handleInputChange = e => {
     const {name, value} = e.target
-
-    if (name === 'username' ){
-      setUsername(value)
-      value !== '' ? setIsUsernameActive(true) : setIsUsernameActive(false)
-    }
-    if (name === 'password' ){
-      setPassword(value)
-      value !== '' ? setIsPasswordActive(true) : setIsPasswordActive(false)
-    }
-    if (name === 'fname' ){
-      setFname(value)
-      value !== '' ? setIsFnameActive(true) : setIsFnameActive(false)
-    }
-    if (name === 'lname' ){
-      setLname(value)
-      value !== '' ? setIsLnameActive(true) : setIsLnameActive(false)
-    }
-    if (name === 'email' ){
-      setEmail(value)
-      value !== '' ? setIsEmailActive(true) : setIsEmailActive(false)
-    }
-    if (name === 'telephone' ){
-      setTelephone(value)
-      value !== '' ? setisTelephoneActive(true) : setisTelephoneActive(false)
-    }
-    if (name === 'address' ){
-      setAddress(value)
-      value !== '' ? setisAddressActive(true) : setisAddressActive(false)
-    }
-    if (name === 'city' ){
-      setCity(value)
-      value !== '' ? setisCityActive(true) : setisCityActive(false)
-    }
-    if (name === 'zip' ){
-      setZip(value)
-      value !== '' ? setisZipActive(true) : setisZipActive(false)
-    }
+    setValues({...values, [name]: value})
   }
 
+  // On form submit alert the current form state values
+  const onSubmit = () => {
+    alert(JSON.stringify(values));
+  };
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={onSubmit}>      
       {/* Login Details Fieldset */}
       <fieldset className={styles['form-group']}>
         <div className={styles['form-group__item']}>
@@ -76,9 +41,8 @@ export default function Form() {
           <TextField
             label="Username"
             name="username"
-            active={isUsernameActive}
-            value={username}
-            changeHandler={handleChange}
+            value={values.username}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -87,9 +51,8 @@ export default function Form() {
             type="password"
             label="Password"
             name="password"
-            active={isPasswordActive}
-            value={password}
-            changeHandler={handleChange}
+            value={values.password}
+            changeHandler={handleInputChange}
             required
             minLength={8}
           />
@@ -105,9 +68,8 @@ export default function Form() {
           <TextField
             label="First Name"
             name="fname"
-            active={isFnameActive}
-            value={fname}
-            changeHandler={handleChange}
+            value={values.fname}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -115,9 +77,8 @@ export default function Form() {
           <TextField
             label="Last Name"
             name="lname"
-            active={isLnameActive}
-            value={lname}
-            changeHandler={handleChange}
+            value={values.lname}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -126,9 +87,8 @@ export default function Form() {
             type="email"
             label="Email"
             name="email"
-            active={isEmailActive}
-            value={email}
-            changeHandler={handleChange}
+            value={values.email}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -137,9 +97,8 @@ export default function Form() {
             type="tel"
             label="Telephone"
             name="telephone"
-            active={isTelephoneActive}
-            value={telephone}
-            changeHandler={handleChange}
+            value={values.telephone}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -154,9 +113,8 @@ export default function Form() {
           <TextField
             label="Address"
             name="address"
-            active={isAddressActive}
-            value={address}
-            changeHandler={handleChange}
+            value={values.address}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -164,9 +122,8 @@ export default function Form() {
           <TextField
             label="City"
             name="city"
-            active={isCityActive}
-            value={city}
-            changeHandler={handleChange}
+            value={values.city}
+            changeHandler={handleInputChange}
             required
           />
         </div>
@@ -174,9 +131,8 @@ export default function Form() {
           <TextField
             label="Zip Code"
             name="zip"
-            active={isZipActive}
-            value={zip}
-            changeHandler={handleChange}
+            value={values.zip}
+            changeHandler={handleInputChange}
             required
           />
         </div>

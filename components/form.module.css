@@ -1,3 +1,4 @@
+/* Some basic fallback styling for generic form elements */
 .form {
   @apply w-full;
 
@@ -9,6 +10,7 @@
     @apply block border border-black p-3 w-full text-sm font-sans transition ease-in-out duration-300 appearance-none;
   }
 
+  /* *Default* Focus State */
   input:focus {
     @apply border-orange outline-none;
   }
@@ -18,6 +20,7 @@
   }
 }
 
+/* Form Group */
 .form-group {
   @apply flex flex-wrap mb-2;
 
@@ -26,10 +29,16 @@
   }
 }
 
+/* Form Group Item */
 .form-group__item {
   @apply w-full mb-4 relative;
 
-  .label {
+  @screen sm {
+    @apply px-2;
+  }
+
+  /* Fancier form styling applied when within a form-group */
+  label {
     @apply absolute bg-white px-0 z-0;
     top: 33%;
     left: 1.325rem;
@@ -37,29 +46,28 @@
     transition: all 0.25s ease-in-out;
   }
 
-  .input {
+  input {
     @apply relative z-10 bg-transparent;
   }
 
-  &:focus-within .label {
+  /* *Fancy* focus state */
+  &:focus-within label {
     @apply text-orange px-2 z-20;
     top: -5px;
     left: 0.75rem;
     transform: scale(0.8);
   }
-
-  .label.is--active {
+  
+  /* Active State (keep the label pinned once field has been filled out)*/
+  label.is--active {
     @apply text-black px-2 z-20;
     top: -5px;
     left: 0.75rem;
     transform: scale(0.8);
   }
-  
-  @screen sm {
-    @apply px-2;
-  }
 }
 
+/* Form Group Item - Half Width Modifier */
 .form-group__item--half {
   @apply w-full;
 

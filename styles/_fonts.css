@@ -1,3 +1,4 @@
+/* Druk Wide - Used for Display font */
 @font-face {
   font-family: 'Druk Wide';
   src: url('../public/fonts/DrukWide-Medium-Web.woff2') format('woff2'),
@@ -7,6 +8,7 @@
   font-display: swap;
 }
 
+/* Suisse Intl - Used for Sans font */
 @font-face {
   font-family: 'Suisse Intl';
   src: url('../public/fonts/SuisseIntl-Regular-WebS.woff2') format('woff2'),

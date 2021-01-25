@@ -20,7 +20,7 @@ export default function TextField({ label, type, name, required, minLength, chan
         className={currentlyActive ? cn(styles['is--active']) : null}
       >{label}</label>
       <input
-      type={type}
+        type={type}
         name={name}
         onInput={activeUpdate}
         onChange={changeHandler}

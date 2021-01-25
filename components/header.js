@@ -1,5 +1,5 @@
-import Container from '../components/container'
-import MetaText from '../components/meta-text'
+import Container from './container'
+import MetaText from './meta-text'
 
 export default function Header() {
   return (

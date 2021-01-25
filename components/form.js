@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './form.module.css'
-import SubmitButton from '../components/submit-button'
-import TextField from '../components/text-field'
+import SubmitButton from './submit-button'
+import TextField from './text-field'
 import cn from 'classnames'
 
 export default function Form() {

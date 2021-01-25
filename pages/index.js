@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import Layout from '../components/layout'
 import Container from '../components/container'
 import Form from '../components/form'
@@ -15,23 +14,29 @@ export default function Index() {
     
       <Container>
         <div className="flex flex-wrap">
+          {/* Nav Column */}
           <nav className="bg-black text-white w-full md:w-40 lg:w-64 p-5" role="navigation">
             <h2 className="font-display uppercase block mb-4">Fixed Width Nav Column</h2>
             
             <ul>
-              <li><a className="underline hover:text-orange focus:text-orange transition ease-in-out duration-300" href="#">Nav Item 1</a></li>
-              <li><a className="underline hover:text-orange focus:text-orange transition ease-in-out duration-300" href="#">Nav Item 2</a></li>
+              {/* Flusha doing Flusha things ;-) */}
+              <li><a className="underline hover:text-orange focus:text-orange focus:outline-none" href="https://www.youtube.com/watch?v=93WjCKFPxL8" target="_blank" rel="noopener noreferrer">Nav Item 1</a></li>
+              {/* My personal favourite Fnatic moment ;-) */}
+              <li><a className="underline hover:text-orange focus:text-orange focus:outline-none" href="https://www.youtube.com/watch?v=XdN67NuhMW4" target="_blank" rel="noopener noreferrer">Nav Item 2</a></li>
             </ul>
           </nav>
 
+          {/* Main Column */}
           <main className="flex-1 p-5" role="main">
             <h1 className="font-display uppercase block mb-4">Fluid Centre Column</h1>
 
+            {/* Form Area */}
             <div className="mt-6">
               <Form />
             </div>
           </main>
 
+          {/* Sidebar Column */}
           <aside className="bg-orange text-white w-full md:w-40 lg:w-64 p-5">
             <h2 className="font-display uppercase block mb-4">Fixed Width Sidebar Column</h2>
           </aside>

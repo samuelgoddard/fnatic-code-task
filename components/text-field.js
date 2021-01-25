@@ -7,7 +7,7 @@ export default function TextField({label, value, changeHandler, type, name, acti
     <>
       <label
         htmlFor={name}
-        className={active ? cn(styles.label, styles.active): styles.label}
+        className={active ? cn(styles.label, styles['is--active']): styles.label}
       >{label}</label>
       <input
         type={type}

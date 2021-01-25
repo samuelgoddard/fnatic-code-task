@@ -1,12 +1,12 @@
+/* Webfonts */
 @import '_fonts.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind base/components */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
 
-body {
-  @apply font-sans;
-}
+/* Default Typography Styles */
+@import '_typography.css';
 
-::-moz-selection { @apply bg-orange text-black bg-opacity-50 }
-::selection { @apply bg-orange text-black bg-opacity-50 }
+/* Tailwind Utilities */
+@import 'tailwindcss/utilities';

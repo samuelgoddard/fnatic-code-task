@@ -1,0 +1,6 @@
+h1, .h1, h2, .h2, h3, .h3 {
+  @apply font-display uppercase block mb-4;
+}
+
+::-moz-selection { @apply bg-orange text-black bg-opacity-50 }
+::selection { @apply bg-orange text-black bg-opacity-50 }

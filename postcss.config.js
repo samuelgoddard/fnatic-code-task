@@ -1,10 +1,10 @@
 module.exports = {
   plugins: {
-    'tailwindcss': {},
-    'autoprefixer': {},
     'postcss-import': {},
+    'tailwindcss': {},
     'postcss-nested': {
       unwrap: ['screen'],
     },
+    'autoprefixer': {}
   },
 }

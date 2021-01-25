@@ -5,9 +5,9 @@ export default function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <section className="w-full flex-1 py-5">
+      <div className="w-full flex-1 py-5">
         {children}
-      </section>
+      </div>
       <Footer />
     </div>
   )
